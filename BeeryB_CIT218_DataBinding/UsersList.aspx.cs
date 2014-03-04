@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace BeeryB_CIT218_DataBinding
 {
-    public partial class About : Page
+    public partial class UsersList : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
