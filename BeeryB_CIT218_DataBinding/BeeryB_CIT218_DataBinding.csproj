@@ -186,6 +186,7 @@
     <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="UsersList.aspx" />
+    <Content Include="UsersManage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -254,6 +255,13 @@
     </Compile>
     <Compile Include="UsersList.aspx.designer.cs">
       <DependentUpon>UsersList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersManage.aspx.cs">
+      <DependentUpon>UsersManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsersManage.aspx.designer.cs">
+      <DependentUpon>UsersManage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />
