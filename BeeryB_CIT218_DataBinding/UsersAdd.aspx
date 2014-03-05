@@ -21,15 +21,17 @@
             <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Password" />
             <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
             <asp:CheckBoxField DataField="IsAdmin" HeaderText="IsAdmin" SortExpression="IsAdmin" />
-            <asp:BoundField DataField="UserID" HeaderText="UserID" InsertVisible="False" ReadOnly="True" SortExpression="UserID" />
-            <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" />
-            <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" />
-            <asp:BoundField DataField="UserName" HeaderText="UserName" SortExpression="UserName" />
-            <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Password" />
-            <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
-            <asp:CheckBoxField DataField="IsAdmin" HeaderText="IsAdmin" SortExpression="IsAdmin" />
             <asp:CommandField ShowInsertButton="True" />
         </Fields>
     </asp:DetailsView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QuizBuilderConnectionString %>" SelectCommand="SELECT DISTINCT * FROM [Users]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QuizBuilderConnectionString %>" SelectCommand="SELECT * FROM [Users]" InsertCommand="INSERT INTO USers(FirstName, LastName, UserName, Password, Email, IsAdmin) VALUES(@FirstName, @LastName,@UserName,@Password,@Email,@IsAdmin)">
+        <InsertParameters>
+            <asp:Parameter Name="FirstName" Type="String" />
+            <asp:Parameter Name="LastName" Type="String" />
+            <asp:Parameter Name="UserName" Type="String" />
+            <asp:Parameter Name="Password" Type="String" />
+            <asp:Parameter Name="Email" Type="String" />
+            <asp:Parameter Name="IsAdmin" Type="Boolean" />
+        </InsertParameters>
+    </asp:SqlDataSource>
 </asp:Content>

@@ -28,14 +28,29 @@
         SelectCommand="SELECT DISTINCT * FROM [Users]"
         DeleteCommand="DELETE FROM [Users] WHERE [UserID] = @UserID" 
         UpdateCommand="UPDATE [Users] 
-                        SET [UserID] = @UserID, 
-                            [FirstName] = @FirstName, 
+                        SET [FirstName] = @FirstName, 
                             [LastName] = @LastName, 
                             [UserName] = @UserName, 
                             [Password] = @Password, 
                             [Email] = @Email, 
                             [IsAdmin] = @IsAdmin 
                         WHERE [UserID] = @UserID">
+        <InsertParameters>
+            <asp:Parameter Name="FirstName" Type="String" />
+            <asp:Parameter Name="LastName" Type="String" />
+            <asp:Parameter Name="UserName" Type="String" />
+            <asp:Parameter Name="Password" Type="String" />
+            <asp:Parameter Name="Email" Type="String" />
+            <asp:Parameter Name="IsAdmin" Type="Boolean" />
+        </InsertParameters>
+        <UpdateParameters>
+            <asp:Parameter Name="FirstName" Type="String" />
+            <asp:Parameter Name="LastName" Type="String" />
+            <asp:Parameter Name="UserName" Type="String" />
+            <asp:Parameter Name="Password" Type="String" />
+            <asp:Parameter Name="Email" Type="String" />
+            <asp:Parameter Name="IsAdmin" Type="Boolean" />
+        </UpdateParameters>
     </asp:SqlDataSource>
 
 </asp:Content>

@@ -11,9 +11,14 @@
     </section>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="FirstName" DataValueField="FirstName" Height="30px" Width="301px">
+    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="FetchLastName" DataTextField="LastName" DataValueField="LastName" Height="30px" Width="301px" AutoPostBack="True">
     </asp:DropDownList>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QuizBuilderConnectionString %>" SelectCommand="SELECT DISTINCT * FROM [Users]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="FetchLastName" runat="server" ConnectionString="<%$ ConnectionStrings:QuizBuilderConnectionString %>" SelectCommand="SELECT [LastName] FROM [Users]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QuizBuilderConnectionString %>" SelectCommand="SELECT DISTINCT * FROM [Users] WHERE ([LastName] = @LastName)">
+        <SelectParameters>
+            <asp:ControlParameter ControlID="DropDownList1" DefaultValue="NULL" Name="LastName" PropertyName="SelectedValue" Type="String" />
+        </SelectParameters>
+    </asp:SqlDataSource>
     <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" CellSpacing="1" DataKeyNames="UserID" DataSourceID="SqlDataSource1" GridLines="None" Height="50px" Width="341px">
         <EditRowStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
         <Fields>
