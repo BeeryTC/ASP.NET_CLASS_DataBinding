@@ -49,9 +49,9 @@
                     <ul id="menu">
                         <li><a runat="server" href="Default.aspx">Home</a></li>
                         <li><a runat="server" href="UsersList.aspx">List</a></li>
-                        <li><a runat="server" href="UsersManage">Manage</a></li>
-                        <li><a runat="server" href="UsersDetail">Info</a></li>
-                        <li><a runat="server" href="UsersAdd">Add</a></li>
+                        <li><a runat="server" href="UsersManage.aspx">Manage</a></li>
+                        <li><a runat="server" href="UsersDetail.aspx">Info</a></li>
+                        <li><a runat="server" href="UsersAdd.aspx">Add</a></li>
                     </ul>
                 </nav>
             </div>

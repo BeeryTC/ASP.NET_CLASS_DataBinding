@@ -14,19 +14,19 @@
     <h3>Manage records:</h3>
     <ol class="round">
         <li class="View">
-            <a href="http://go.microsoft.com/fwlink/?LinkId=245146"><h5>REGISTERED USERS</h5></a>
+            <a href="UsersList.aspx"><h5>REGISTERED USERS</h5></a>
             View a list of all currently registered users and their information
             </li>
         <li class="Manage">
-            <a href="http://go.microsoft.com/fwlink/?LinkId=245147"><h5>MANAGE USERS</h5></a>
+            <a href="UsersManage.aspx"><h5>MANAGE USERS</h5></a>
             Tools to update and delete user information
         </li>
         <li class="Information">
-            <a href="http://go.microsoft.com/fwlink/?LinkId=245143"><h5>USER INFORMATION</h5></a>
+            <a href="UsersDetail.aspx"><h5>USER INFORMATION</h5></a>
             You can easily find detailed information on every user
         </li>
         <li class="Add">
-            <a href="http://go.microsoft.com/fwlink/?LinkId=245143"><h5>ADD NEW USERS</h5></a>
+            <a href="UsersAdd.aspx"><h5>ADD NEW USERS</h5></a>
             Create new user accounts
         </li>
     </ol>
